@@ -4,13 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NASA API Pictures</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov">
     <!-- ZTM Favicon -->
     <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
 </head>
 <body>
+    <!--<div class="loader" hidden>
+        <img src="img/rocket.svg" alt="Rocket loading animation">
+    </div> -->
+    <div class="container">
+        <div class="navigation-container">
+            <span class="background"></span>
+            <!-- Results Nav-->
+            <span class="navigation-items" id="resultNav">
+                <h3 class="clickable">Favorites</h3>
+                <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+                <h3 class="clickable">Load more</h3>
+            </span>
+            <!-- Favorites Nav -->
+            <span class="navigation-items hidden" id="favoritesNav">
+                <h3 class="clickable">Load more NASA image</h3>
+            </span>
+        </div>
+    </div>
+
+    <div class="images-container">
+        <div class="card">
+            <a href="" title="Full view image" target="_blank">
+                <img src="http://apod.nasa.gov/apod/image/2007/msv1500crop.jpg" alt="Nasa picture of the day" class="card-img-top">
+            </a>
+            <div class="card-body">
+                <h1>Title of image</h1>
+                <p class="clickable">Add to favorites</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo alias laboriosam iusto optio inventore quisquam debitis rerum, culpa et exercitationem ea, dolores voluptas quos corporis tenetur qui provident dolorem consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi numquam dolore esse ullam explicabo, delectus iste voluptatum nostrum, debitis fugiat repudiandae, est maxime vel in consequuntur! Laudantium, quod ullam!</p>
+                <small class="text-muted">
+                    <strong>12-12-2020</strong>
+                    <span>Copyright info</span>
+                </small>
+            </div>
+        </div>
+    </div>
+
+    <div class="save-confirmed">
+        <h1>ADDED!</h1>
+    </div>
     <!-- Script -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA APOD</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov">
+    <!-- Default Favicon -->
+    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader hidden">
+        <img src="rocket.svg" alt="Rocket Loading Animation">
+    </div>
+    <!-- Container -->
+    <div class="container">
+        <!-- Navigation -->
+        <div class="navigation-container">
+            <span class="background"></span>
+            <!-- Results Nav -->
+            <span class="navigation-items" id="resultsNav">
+                <h3 class="clickable" onclick="updateDOM('favorites')">Favorites</h3>
+                <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+                <h3 class="clickable" onclick="getNasaPictures()">Load More</h3>
+            </span>
+            <!-- Favorites Nav -->
+            <span class="navigation-items hidden" id="favoritesNav">
+                <h3 class="clickable" onclick="getNasaPictures()">Load More NASA Images</h3>
+            </span>
+        </div>
+        <!-- Images Container -->
+        <div class="images-container"></div>
+    </div>
+    <!-- Save Confirmation -->
+    <div class="save-confirmed" hidden>
+        <h1>ADDED!</h1>
+    </div>
+    <!-- Script -->
+    <script src="js/script.js"></script>
 </body>
 </html>
