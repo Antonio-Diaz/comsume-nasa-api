@@ -6,7 +6,7 @@ const loader = document.querySelector('.loader');
 
 // NASA API
 const count = 10;
-const apiKey = 'dKlPaNsHkBSFMTVqNeeS1E0bUmF3okyeexzKOUSC';
+const apiKey = 'U1JFLMld2SGahJHv6iQY8J6YeXGBeAGK1ce37sGR';
 const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=${count}`;
 
 let resultsArray = [];
